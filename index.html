@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World FM Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="radio-container">
+        <!-- The hidden audio player -->
+        <audio id="audio-player" crossorigin="anonymous"></audio>
+
+        <!-- Radio Face -->
+        <div class="radio-face">
+            <!-- Top Section: Display -->
+            <div class="top-display">
+                <div class="brand-name">Global Radio</div>
+                <div class="display-screen">
+                    <div class="power-indicator"></div>
+                    <span id="station-name-display">-- OFF --</span>
+                    <div class="stereo-indicator">STEREO</div>
+                </div>
+            </div>
+
+            <!-- Station List Display -->
+            <div class="station-list-container">
+                <div id="station-list">
+                    <div class="station-item-placeholder">Search for a station or find one near you...</div>
+                </div>
+            </div>
+
+            <!-- Search and Controls -->
+            <div class="search-controls">
+                <div class="search-form-container">
+                    <div class="search-actions">
+                        <form id="search-form">
+                            <input type="search" id="search-input" placeholder="Search or find stations near you" autocomplete="off">
+                            <button type="submit">Search</button>
+                        </form>
+                        <button type="button" id="find-me-btn" title="Find Stations Near Me">📍</button>
+                    </div>
+                    <div id="search-suggestions"></div>
+                </div>
+
+                <div class="playback-controls">
+                    <button id="prev-station" title="Previous Station">«</button>
+                    <button id="power-button" class="power-btn"></button>
+                    <button id="next-station" title="Next Station">»</button>
+                </div>
+                 <div class="volume-control">
+                    <label for="volume-slider">Volume</label>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                </div>
+            </div>
+        </div>
+        <div class="api-credit">Powered by <a href="https://www.radio-browser.info/" target="_blank">Radio-Browser.info</a> API</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
